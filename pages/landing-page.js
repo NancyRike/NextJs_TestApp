@@ -10,37 +10,26 @@ import {
   InputRightElement,
   Text
 } from "@chakra-ui/react";
-import NotificationBell from "../public/assets/notification-bell.svg";
+import NotificationBell from "../public/favicon.ico";
 import ShoppingCart from "../public/assets/shopping-cart.svg";
-// import pageImage from "../../assets/groceryImage.jpg";
 
 const LandingPage = () => {
   const property = {
     ShoppingCartImage: ShoppingCart,
-    // blueColour:
   };
   return (
     <main>
-      <Box
-        bgImage="url('/assets/groceryImage.jpg')"
-        h="100vh"
-        w="100vw"
-        bgRepeat="no-repeat"
-        position="relative"
-        bgBlendMode="overlay"
-        backgroundSize="cover"
-      >
         <Container maxW="container.lg">
-          <Box d="flex" justifyContent="space-between" pt="5">
+          <Box d="flex" justifyContent="space-between" py="4">
             <Heading as="h3" size="md" color="#0000FF">
               shopurban
             </Heading>
             <Box d="flex" w="100" justifyContent="space-between">
               {/* <Box>
-                <Image src={property.ShoppingCartImage} alt="cart" />
+                <Image src="../public/assets/shopping-cart.svg" alt="cart" />
               </Box>
               <Box>
-                <Image src={NotificationBell} alt="cart" />
+                <img src="/assets/shopping-cart.svg" alt="cart" />
               </Box> */}
               <Box
                 borderRadius="50"
@@ -64,6 +53,17 @@ const LandingPage = () => {
               </Box>
             </Box>
           </Box>
+          </Container>
+
+          <Box
+        bgImage="url('/assets/groceryImage.jpg')"
+        h="100vh"
+        w="100vw"
+        bgRepeat="no-repeat"
+        position="relative"
+        bgBlendMode="overlay"
+        backgroundSize="cover"
+      > 
           <Box top="0" left="0" bottom="0" h="450px" d="flex" justifyContent="center" alignItems="center">
             <Container maxW='container.md' centerContent={true}>
               <Box>
@@ -84,7 +84,6 @@ const LandingPage = () => {
               </Box>
             </Container>
           </Box>
-        </Container>
       </Box>
     </main>
   );
